@@ -1,0 +1,151 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 12px;
+    color: #000000;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: normal;
+}
+
+
+.container {
+    max-width: 1338px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.header {
+    padding-top: 20px;
+    margin-bottom: 25px;
+}
+
+.header__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 5px;
+}
+
+.header__contacts {
+    display: flex;
+}
+
+.contacts__title {
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+
+.contacts__link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.contacts__link:hover {
+    color: #5C3700;
+    transition: color 150ms linear;
+}
+
+.header__icons {
+    display: flex;
+}
+
+.icons__link {
+    margin-right: 5px;
+}
+
+.icons__link:hover > .icons__icon {
+    fill: #5C3700;
+    transition: fill 150ms linear;
+}
+
+.icons__icon {
+    width: 18px;
+    height: 18px;
+}
+
+.icons__link:last-child {
+    margin-right: 0;
+}
+
+
+.header__title {
+    font-family: 'Old Standard TT', serif;
+    font-size: 60px;
+
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+.title__link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav {
+    width: 533px;
+
+    display: flex;
+    justify-content: space-between;
+
+    text-transform: uppercase;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.nav__item {
+    position: relative;
+}
+
+.nav__item:hover:after {
+    transform: scaleX(1);
+    transition: transform 200ms linear;
+}
+
+.nav__item:after {
+    width: 100%;
+    height: 1px;
+
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+
+    background-color: #5C3700;
+
+    content: "";
+
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 200ms linear;
+}
+
+.nav__item--selected:after {
+    transform: scaleX(1);
+}
+
+
+.header__nav {
+    margin: 0 auto;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: inherit;
+}
